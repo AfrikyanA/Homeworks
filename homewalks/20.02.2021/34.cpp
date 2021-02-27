@@ -35,8 +35,6 @@ class Student {
 				cin >> a.m_obName[i];						
 			}
 		}
-
-
 };
 
 int main(){
