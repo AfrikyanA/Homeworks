@@ -29,7 +29,7 @@ public:
     capacity = oth.capacity;
     delete[] arr;
     arr = new T[oth.size];
-    for(int i = 0; i < size; ++i){
+    for(int i = 0; i < oth.size; ++i){
       arr[i] = oth.arr[i];
     }
     return arr;
