@@ -24,7 +24,7 @@ public:
   void display();
   T getI(int index){return arr[index];};
 
-  MyVector<T>& operator=(const MyVector<T>& oth){ //dont work
+  T* operator=(const MyVector<T>& oth){ //dont work shxtayakan
     size = oth.size;
     capacity = oth.capacity;
     delete[] arr;
