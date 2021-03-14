@@ -43,7 +43,7 @@ private:
 
 
 
-template <typename T>                           // dont work
+template <typename T>                           
 MyVector<T>::MyVector(const MyVector<T> &oth){
   arr = new T[oth.size];
   size = oth.size;
