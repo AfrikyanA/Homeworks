@@ -45,10 +45,10 @@ private:
 
 template <typename T>                           // dont work
 MyVector<T>::MyVector(const MyVector<T> &oth){
-  arr = new T[oth.size()];
-  size = oth.size();
-  capacity = oth.capacity();
-  for(int i = 0; i < oth.size(); ++i){
+  arr = new T[oth.size];
+  size = oth.size;
+  capacity = oth.capacity;
+  for(int i = 0; i < oth.size; ++i){
     arr[i] = oth.arr[i];
   }
 }
