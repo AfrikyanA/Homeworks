@@ -24,7 +24,7 @@ public:
   void display();
   T getI(int index){return arr[index];};
 
-  T* operator=(const MyVector<T>& oth){ //dont work shxtayakan
+  void operator=(const MyVector<T>& oth){ 
     size = oth.size;
     capacity = oth.capacity;
     delete[] arr;
@@ -32,7 +32,6 @@ public:
     for(int i = 0; i < oth.size; ++i){
       arr[i] = oth.arr[i];
     }
-    return arr;
   }
   
 private:
