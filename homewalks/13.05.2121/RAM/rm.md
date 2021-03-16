@@ -1,1 +1,2 @@
-
+Menak 6na normal
+Irikunn em arel, chei stugel dra hmar mnacac@ tenca, el chkar filer@ pti 0ic anei dra havesne chka...
