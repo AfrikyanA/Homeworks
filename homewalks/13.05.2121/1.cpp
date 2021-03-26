@@ -12,7 +12,7 @@ public:
 	T data;
 	List<T>* next;
    ~List(){delete next;}
-	void insert(T val, int pos, List<T>* head)
+	void insert(T val, int pos, List<T>* head);
 	void push_front(T val, List<T>* head);
 	void print(const List<T>* head);
 };
@@ -21,11 +21,18 @@ public:
 template <typename T>
 void List<T>::push_front(T val, List<T>* head)
 {
-	List<T>* tmp = head;
-	head->next = new List<T>;
-	head->next->data = val;
-	head->next->next = tmp;
-	
+	if(head == nullptr)
+	{
+		List<T>* newEl = new List<T>;
+		newEl->data = val;
+		head = newEl;
+	}
+	else{
+	List<T>* newEl = new List<T>;
+	newEl->data = val;
+	newEl->next = head;
+	head = newEl;
+	}
 }
 
 
@@ -39,14 +46,3 @@ void print(List<T>* head)
 	}
 }
 
-
-int main()
-{
-	List<int>* head = new List<int>;
-	head->data = 4;
-	head->next = new List<int>;
-	head->next->data = 7;
-	head->next->next = nullptr;
-	
-	cout << head->next->data;
-}
