@@ -31,17 +31,18 @@ int main()
 	ops.emplace('-', sub);
 	ops.emplace('*', mul);
 	ops.emplace('/', division);
-	
-repeat:
+
+while(1)
+{	
 	char choice;
 	std::cout << "Enter operation:(q for quit) ";
 	std::cin >> choice;
 	
-	if (choice == 'q') return 0;
+	if (choice == 'q') break;
 	
 	if (ops.find(choice) == ops.end()){
 		std::cout << "Available operations +,-,*,/ ";
-		goto repeat;
+		//
 	}
 	
 	int a, b;
@@ -51,6 +52,7 @@ repeat:
 	std::cin >> b;
 	
 	std::cout << ops[choice](a,b) << std::endl;
-	goto repeat;
+
+} //while
 }
 
